@@ -25,7 +25,7 @@ Organização Mobilidade - Social
 ## Demonstração
 [Link](https://jonascoco.github.io/frontend-web-praticaIV)
 
-## Tecnologias Utilizada
+## Tecnologias Utilizadas
 [HTML]() - [CSS]()
 
 ## Autor do Projeto
