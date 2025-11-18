@@ -30,7 +30,7 @@ Organização Mobilidade - Social
 
 ## Autor do Projeto
 [Jonas Aparecido Côco]()
-<font size="2">[Cruzeiro do Sul - UNICID Universidade Cidade de S. Paulo]()</font>
+<br><font size="2">[Cruzeiro do Sul - UNICID Universidade Cidade de S. Paulo]()</font>
 
 
 [Linkedin](https://www.linkedin.com)
