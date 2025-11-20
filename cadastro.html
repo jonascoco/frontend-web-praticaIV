@@ -118,8 +118,6 @@
             nome.focus();
             return false;           
         }
-
-
         const emailInput = document.getElementById('email');
         const mensagemErro = document.getElementById('mensagemErro');
         const email = emailInput.value;
@@ -130,7 +128,6 @@
             alert('Por favor, insira um e-mail válido.');
             return false;
         }
-
 
         const strCPF = document.getElementById('cpf');
         var Soma;
@@ -177,7 +174,52 @@
 
     
         return true;
-    }   
+    } 
+    
+    
+
+
+    function  handleSubmit(event){
+
+        var nome = document.getElementById('nome');
+        if (nome.value==""){
+            alert("Informe o Nome Completo.");
+            event.preventDefault();
+            nome.focus();
+            return false;           
+        }
+        const emailInput = document.getElementById('email');
+        const mensagemErro = document.getElementById('mensagemErro');
+        const email = emailInput.value;
+
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!regexEmail.test(email)) {
+            alert('Por favor, insira um e-mail válido.');
+            return false;
+        }
+        const form = document.getElementById('volunteerForm');
+        const formData = {
+            nome: form.nome.value.trim(),
+            email: form.email.value.trim(),
+            cpf: form.cpf.value.trim(),
+            telefone: form.telefone.value.trim().addEventListeneridade,
+            dtnasc: form.dtnasc.value.trim(),
+            endereco: form.endereco.value.trim(),
+            cep: form.cep.value.trim(),
+            cidade: form.cidade.value.trim(),
+            estado: form.estado.value.trim()
+        };
+
+        let organizacao = [];
+        if (localStorage.getItem('OrganizacaoMobilidadeVoluntario') !=null){
+        organizacao = JSON.parse(localStorage.getItem('OrganizacaoMobilidadeVoluntario'));
+        }else{organizacao;}
+        organizacao.push(formData);
+        localStorage.setItem('OrganizacaoMobilidadeVoluntario',JSON.stringify(organizacao));
+
+    }
+
 </script>
 
 
